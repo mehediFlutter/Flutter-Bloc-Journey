@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_journey/config/routes/routes_name.dart';
 import 'package:flutter_bloc_journey/views/home/home_screen.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -10,15 +11,16 @@ class SplashScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(
-            child: Text("Splash Screen", style: TextStyle(fontSize: 30)),
-          ),
+          Center(child: Text("Splash Screen", style: TextStyle(fontSize: 30))),
           SizedBox(height: 50),
-          ElevatedButton(onPressed: (){
-
-          }, child: Text("Go to Home Screen"))
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, RoutesName.homeScreen);
+            },
+            child: Text("Go to Home Screen"),
+          ),
         ],
       ),
     );
   }
- }
+}
