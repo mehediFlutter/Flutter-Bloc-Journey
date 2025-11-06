@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_journey/config/routes/routes.dart';
+import 'package:flutter_bloc_journey/config/routes/routes_name.dart';
 import 'package:flutter_bloc_journey/views/splash/splash_screen.dart';
 
 void main() {
@@ -19,7 +21,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: SplashScreen(),
+ initialRoute: RoutesName.splashScreen,
+      onGenerateRoute: Routes.generateRoutes,
 
     );
   }

@@ -15,7 +15,7 @@ class SplashScreen extends StatelessWidget {
           ),
           SizedBox(height: 50),
           ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(),));
+
           }, child: Text("Go to Home Screen"))
         ],
       ),
