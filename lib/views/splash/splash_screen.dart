@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_journey/config/routes/routes_name.dart';
 import 'package:flutter_bloc_journey/views/widgets/custom_button.dart';
+import 'package:flutter_bloc_journey/views/widgets/internet_exception.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -12,6 +13,9 @@ class SplashScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          InternetException(
+            onTap: (){},
+          ),
           Center(child: Text("Splash Screen", style: TextStyle(fontSize: 30))),
           SizedBox(height: 50),
 

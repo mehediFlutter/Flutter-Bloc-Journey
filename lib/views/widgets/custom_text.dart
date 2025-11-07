@@ -7,6 +7,9 @@ class CustomText extends StatelessWidget {
   final Color textColor;
   final FontWeight fontWeight;
   final double paddingLeft, paddingTop, paddingRight, paddingBottom;
+  final bool isTextOverFlow ;
+  final TextAlign textAlign;
+
 
   const CustomText({
     super.key,
@@ -18,6 +21,8 @@ class CustomText extends StatelessWidget {
     this.paddingTop = 0,
     this.paddingRight = 0,
     this.paddingBottom = 0,
+    this.isTextOverFlow = true,
+     this.textAlign = TextAlign.start,
   });
 
   @override
@@ -31,14 +36,14 @@ class CustomText extends StatelessWidget {
       ),
       child: Text(
         text,
-        overflow: TextOverflow.ellipsis,
+        overflow: isTextOverFlow? TextOverflow.ellipsis:null,
         style: GoogleFonts.poppins(
           color: textColor,
           fontSize: fontSize,
           fontWeight: fontWeight,
 
-
         ),
+        textAlign: textAlign,
       ),
     );
   }
